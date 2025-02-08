@@ -30,11 +30,10 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: ./  # ✅ Ensure we install from the correct directory
-
+        working-directory: /AnanikaCreations/  
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
-        working-directory: ./  # ✅ Install within the root workspace
+        working-directory: /AnanikaCreations/
 
       - name: Get Id Token
         uses: actions/github-script@v6
