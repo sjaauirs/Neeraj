@@ -68,18 +68,3 @@ jobs:
           action: "close"
 
 
-
-I am getting 
-Run Azure/static-web-apps-deploy@v1
-/usr/bin/docker run --name a7599aa17de75aaa0437ea42ecb52149d55be_36e32c --label 5a7599 --workdir /github/workspace --rm -e "INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN" -e "INPUT_ACTION" -e "INPUT_APP_LOCATION" -e "INPUT_API_LOCATION" -e "INPUT_OUTPUT_LOCATION" -e "INPUT_APP_BUILD_COMMAND" -e "INPUT_API_BUILD_COMMAND" -e "INPUT_APP_ARTIFACT_LOCATION" -e "INPUT_REPO_TOKEN" -e "INPUT_ROUTES_LOCATION" -e "INPUT_SKIP_APP_BUILD" -e "INPUT_CONFIG_FILE_LOCATION" -e "INPUT_SKIP_API_BUILD" -e "INPUT_PRODUCTION_BRANCH" -e "INPUT_DEPLOYMENT_ENVIRONMENT" -e "INPUT_IS_STATIC_EXPORT" -e "INPUT_DATA_API_LOCATION" -e "INPUT_GITHUB_ID_TOKEN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE
-DeploymentId: 93957b03-149f-479d-a2f3-1de0fbc806c2
-Try to validate location at: '/github/workspace/AnanikaCreations'.
-App Directory Location: 'AnanikaCreations/' was found.
-Try to validate location at: '/github/workspace/swa-db-connections'.
-Looking for event info
-The content server has rejected the request with: BadRequest
-Reason: No matching Static Web App was found or the api key was invalid.
-
-For further information, please visit the Azure Static Web Apps documentation at https://docs.microsoft.com/en-us/azure/static-web-apps/
-If you believe this behavior is unexpected, please raise a GitHub issue at https://github.com/azure/static-web-apps/issues/
-Exiting
