@@ -19,6 +19,22 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Ensure you use the Node.js version compatible with your project
+
+      - name: Install dependencies
+        run: |
+          cd Neeraj/AnanikaCreations
+          npm install
+
+      - name: Build Angular App
+        run: |
+          cd Neeraj/AnanikaCreations
+          npx nx run business-development-system:build:production
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -26,12 +42,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_MANGO_FOREST_004C73E1E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "Neeraj\AnanikaCreations\dist" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          app_location: "Neeraj/AnanikaCreations"  # App source code path
+          api_location: ""  # No API, so leave it empty
+          output_location: "Neeraj/AnanikaCreations/dist/apps/business-development-system" # Fixed output path
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
