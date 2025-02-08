@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
   selector: 'employee',
   imports: [FormsModule , CommonModule],
   standalone: true,  // This makes the component standalone.
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  templateUrl: './Employee.component.html',
+  styleUrls: ['./Employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
   employees: Employee[] = [];
