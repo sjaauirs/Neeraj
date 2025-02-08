@@ -31,6 +31,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
         working-directory: AnanikaCreations  # ✅ Ensure we install from the correct directory
+        
+        - name: Get Id Token
+        id: idtoken
+        run: echo "ID_TOKEN=$(curl -H 'Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN' '$ACTIONS_ID_TOKEN_REQUEST_URL' | jq -r '.value')" >> $GITHUB_ENV
 
       - name: Build And Deploy
         id: builddeploy
@@ -41,8 +45,10 @@ jobs:
           app_location: "AnanikaCreations/" # ✅ App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist/apps/business-development-system" # ✅ Built app content directory
-          github_id_token: ${{ steps.idtoken.outputs.result }}
+          github_id_token: ${{ env.ID_TOKEN }}
           app_build_command: "npx nx build business-development-system --prod"
+
+
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
