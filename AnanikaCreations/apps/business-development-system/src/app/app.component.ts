@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { initFlowbite } from 'flowbite';
 
 @Component({

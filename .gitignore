@@ -6,3 +6,7 @@
 /AnanikaCreations/apps/employeeManagement/.vs
 /AnanikaCreations/.vs/AnanikaCreations/FileContentIndex/*.vsidx
 /AnanikaCreations/.vs/AnanikaCreations/FileContentIndex/*.vsidx
+
+.nx/installation
+.nx/cache
+.nx/workspace-data

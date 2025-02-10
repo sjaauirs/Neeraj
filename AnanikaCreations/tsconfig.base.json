@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ananika-creations/msal": ["libs/shared/msal/index.ts"],
       "@ananika-creations/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
